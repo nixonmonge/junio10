@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Pais.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebInsertar.aspx" />
     <Content Include="WebListar.aspx" />
@@ -76,8 +77,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Pais.cs" />
     <Compile Include="Models\Weather.cs" />
+    <Compile Include="Pais.aspx.cs">
+      <DependentUpon>Pais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pais.aspx.designer.cs">
+      <DependentUpon>Pais.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicio\PaisServicio.cs" />
     <Compile Include="Servicio\WeatherServicio.cs" />
     <Compile Include="WebInsertar.aspx.cs">
       <DependentUpon>WebInsertar.aspx</DependentUpon>
