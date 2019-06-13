@@ -10,10 +10,14 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:TextBox ID="TextWeatherId" runat="server">001</asp:TextBox><br />
-            <asp:TextBox ID="TextFecha" runat="server">Fecha</asp:TextBox><br />
-            <asp:TextBox ID="TextEstado" runat="server">Estado</asp:TextBox><br />
-            <asp:TextBox ID="TextLugar" runat="server">Lugar</asp:TextBox><br />
+            <asp:TextBox ID="TextWeatherId" runat="server"></asp:TextBox><br />
+            <asp:TextBox ID="TextFecha" runat="server"></asp:TextBox><br />
+            <asp:TextBox ID="TextEstado" runat="server"></asp:TextBox>
+            <br />
+            Ubicacion:
+            <asp:DropDownList ID="DropDownList1" runat="server" DataTextField="PaisNombre" DataValueField="PaisId">
+            </asp:DropDownList>
+            <br />
             <asp:Button ID="Button1" runat="server" Text="Enviar" OnClick="Button1_Click" CssClass="btn btn-success" />
         </div>
     </form>

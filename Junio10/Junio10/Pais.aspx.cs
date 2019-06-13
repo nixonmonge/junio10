@@ -19,15 +19,15 @@ namespace Junio10
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            Weather clima = new Weather();
+            Junio10.Models.Pais pais = new Junio10.Models.Pais();
 
             //2) leer los valores de los cuadros de texto y guardarlos en el objeto
-            clima = WeatherServicio.Factory(TextWeatherId, TextFecha, TextEstado, TextLugar);
+            pais = PaisServicio.Factory(PaisId,PaisNombre);
             //3) agregar el objeto a la lista // esto se fue a Weather Servicio
             /*List<Weather> climas =(List<Weather>)Session["listado"];
             climas.Add(clima);
             Session["listado"] = climas;*/
-            WeatherServicio.Insertar(clima, Session);
+            PaisServicio.Insertar(pais, Session);
             //4) devolvernos a la pagina lista
             Response.Redirect("WebListar.aspx");
 

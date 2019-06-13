@@ -17,13 +17,18 @@ namespace Junio10.Servicio
             climas.Add(clima);// agregamos
             sesion["listado"] = climas; // guardamos la sesion
         }
-        public static Weather Factory(TextBox WeatherId, TextBox Fecha, TextBox Estado, TextBox Lugar)
+        public static Weather Factory(
+            TextBox WeatherId, 
+            TextBox Fecha, 
+            TextBox Estado, 
+            DropDownList ComoUbicacion)
         {
             Weather nuevoClima = new Weather();
+            nuevoClima.Pais = new Models.Pais();
             nuevoClima.WeatherId = Convert.ToInt32(WeatherId.Text);
             nuevoClima.Fecha = Fecha.Text;
             nuevoClima.Estado = Estado.Text;
-            nuevoClima.Lugar = Lugar.Text;
+            nuevoClima.Pais.PaisId =Convert.ToInt32(ComoUbicacion.SelectedItem.Value);
             return nuevoClima;
         }
 

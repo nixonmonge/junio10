@@ -13,7 +13,8 @@ namespace Junio10
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DropDownList1.DataSource = PaisServicio.ListarTodo(Session);
+            DropDownList1.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -22,7 +23,7 @@ namespace Junio10
             Weather clima = new Weather();
 
             //2) leer los valores de los cuadros de texto y guardarlos en el objeto
-            clima = WeatherServicio.Factory(TextWeatherId, TextFecha, TextEstado, TextLugar);
+            clima = WeatherServicio.Factory(TextWeatherId, TextFecha, TextEstado, DropDownList1);
             //3) agregar el objeto a la lista // esto se fue a Weather Servicio
             /*List<Weather> climas =(List<Weather>)Session["listado"];
             climas.Add(clima);

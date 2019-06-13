@@ -11,29 +11,29 @@ namespace Junio10.Servicio
 {
     public class PaisServicio
     {
-        public static void Insertar(Pais pais, HttpSessionState sesion) //se remplazo el insertar por la sesion
+        public static void Insertar(Junio10.Models.Pais pais, HttpSessionState sesion) //se remplazo el insertar por la sesion
         {
-            List<Pais> climas = ListarTodo(sesion); //leemos
+            List<Junio10.Models.Pais> climas = ListarTodo(sesion); //leemos
             climas.Add(pais);// agregamos
             sesion["llavePais"] = climas; // guardamos la sesion
         }
-        public static Pais Factory(TextBox PaisId, TextBox PaisNombre)
+        public static Junio10.Models.Pais Factory(TextBox PaisId, TextBox PaisNombre)
         {
-            Pais nuevoPais = new Pais();
+            Junio10.Models.Pais nuevoPais = new Junio10.Models.Pais();
             nuevoPais.PaisId = Convert.ToInt32(PaisId.Text);
             nuevoPais.PaisNombre = PaisNombre.Text;
             return nuevoPais;
         }
 
-        public static List<Pais> ListarTodo(HttpSessionState sesion)
+        public static List<Junio10.Models.Pais> ListarTodo(HttpSessionState sesion)
         {
             if (sesion["llavePais"] != null)
             {
-                return (List<Pais>)sesion["llavePais"];
+                return (List<Junio10.Models.Pais>)sesion["llavePais"];
             }
             else
             {
-                return new List<Pais>();
+                return new List<Junio10.Models.Pais>();
             }
 
 
@@ -42,5 +42,5 @@ namespace Junio10.Servicio
 
 
 
-        }
+    }   }
 }

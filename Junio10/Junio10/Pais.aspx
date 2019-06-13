@@ -9,11 +9,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <br />
+            Id:&nbsp;
             <asp:TextBox ID="PaisId" runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:TextBox ID="PaisNombre" runat="server"></asp:TextBox>
+            Pais: <asp:TextBox ID="PaisNombre" runat="server"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />

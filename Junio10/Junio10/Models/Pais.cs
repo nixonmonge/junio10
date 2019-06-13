@@ -9,8 +9,8 @@ namespace Junio10.Models
 {
     public class Pais
     {
-        public int PaisId { set; get; }
-        public string PaisNombre { set; get; }
+        public int PaisId { set; get; } //llave primaria PK primary Key
+        public string PaisNombre { set; get; } 
 
         public Pais()
         {
