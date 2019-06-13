@@ -72,6 +72,9 @@
     <Content Include="png\bolt.png" />
     <Content Include="png\calm.png" />
     <Content Include="png\celsius.png" />
+    <Content Include="png\clase 12\01.PNG" />
+    <Content Include="png\clase 12\02.PNG" />
+    <Content Include="png\clase 12\03.PNG" />
     <Content Include="png\clouds-1.png" />
     <Content Include="png\clouds-and-sun.png" />
     <Content Include="png\clouds.png" />
