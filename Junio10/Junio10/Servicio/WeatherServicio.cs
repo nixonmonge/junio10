@@ -19,16 +19,19 @@ namespace Junio10.Servicio
         }
         public static Weather Factory(
             TextBox WeatherId, 
-            TextBox Fecha, 
-            TextBox Estado, 
+            TextBox Fecha,
+            DropDownList Estado, 
             DropDownList ComoUbicacion)
         {
             Weather nuevoClima = new Weather();
             nuevoClima.Pais = new Models.Pais();
             nuevoClima.WeatherId = Convert.ToInt32(WeatherId.Text);
             nuevoClima.Fecha = Fecha.Text;
-            nuevoClima.Estado = Estado.Text;
+            nuevoClima.Estado.EstadoId = Convert.ToInt32(Estado.SelectedItem.Value);
+            nuevoClima.Estado.Nombre= Estado.SelectedItem.Text;
             nuevoClima.Pais.PaisId =Convert.ToInt32(ComoUbicacion.SelectedItem.Value);
+            nuevoClima.Pais.PaisNombre = ComoUbicacion.SelectedItem.Text;
+
             return nuevoClima;
         }
 

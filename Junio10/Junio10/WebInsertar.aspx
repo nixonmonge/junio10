@@ -12,7 +12,8 @@
         <div>
             <asp:TextBox ID="TextWeatherId" runat="server"></asp:TextBox><br />
             <asp:TextBox ID="TextFecha" runat="server"></asp:TextBox><br />
-            <asp:TextBox ID="TextEstado" runat="server"></asp:TextBox>
+            <asp:DropDownList ID="DropDownList2" runat="server" DataTextField="Nombre" DataValueField="EstadoId">
+            </asp:DropDownList>
             <br />
             Ubicacion:
             <asp:DropDownList ID="DropDownList1" runat="server" DataTextField="PaisNombre" DataValueField="PaisId">

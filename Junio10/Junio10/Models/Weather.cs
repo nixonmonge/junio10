@@ -11,9 +11,10 @@ namespace Junio10.Models
     {
         public int WeatherId { set; get; }
         public  string Fecha { set; get; }
-        public  string Estado { set; get; }
+
         //public  string Lugar { set; get; }
         public Pais Pais { set; get; } = new Pais();
+        public Estado Estado { set; get; } = new Estado();
 
         //Quick Action = crear un constructor vacio
         public Weather()
